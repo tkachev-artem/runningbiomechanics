@@ -1,0 +1,28 @@
+{
+  "name": "@biomech/gigachat-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "echo 'lint not configured'",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@biomech/types": "*",
+    "@biomech/calculators": "*",
+    "gigachat": "^0.0.18"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
