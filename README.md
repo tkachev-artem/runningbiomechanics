@@ -37,5 +37,5 @@ bun run dev
 ```bash
 curl -X POST http://localhost:3000/analyze \
   -H "Content-Type: application/json" \
-  -d @apps/mcp-server/tests/fixtures/real-data.json
+  -d @$(pwd)/apps/mcp-server/tests/fixtures/real-data.json
 ```
