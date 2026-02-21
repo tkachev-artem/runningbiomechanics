@@ -34,8 +34,19 @@ bun run dev
 
 ## Тестирование
 
+### Запускаем анализ
+
 ```bash
 curl -X POST http://localhost:3000/analyze \
   -H "Content-Type: application/json" \
   -d @$(pwd)/apps/mcp-server/tests/fixtures/real-data.json
+```
+
+### Вытаскиваем score
+
+```bash
+curl -s -X POST http://localhost:3000/analyze \
+  -H "Content-Type: application/json" \
+  -d @"$(pwd)/apps/mcp-server/tests/fixtures/real-data.json" \
+  | jq '.blocks[] | select(.id == "technique") | .data.score'
 ```
